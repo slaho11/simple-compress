@@ -1,0 +1,37 @@
+[project]
+name = "compress"
+version = "0.1.0"
+description = "Simple compression utility - BWT + RLE"
+authors = [
+    {name = "Matej Slahucka",email = "slahucka11@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+]
+
+[tool.poetry]
+packages = [{include = "compress", from = "src"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+test = [
+    "pytest (>=9.0.1,<10.0.0)"
+]
+lint = [
+    "ruff (>=0.14.6,<0.15.0)"
+]
+
+[tool.ruff]
+line-length = 90
+indent-width = 4
+target-version= "py314"
+
+[tool.ruff.format]
+quote-style = "single"
+indent-style = "space"
+skip-magic-trailing-comma = true
+line-ending = "auto"
